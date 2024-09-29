@@ -33,7 +33,7 @@ $(function () {$('#work_slider').slick({
 
             $(function () {
               $('.js-open').click(function () {
-                $('#overlay, .modal-window').show();
+                $('#overlay, .modal-window').fadeIn();
               });
               // オーバーレイクリックでもモーダルを閉じるように
               $('.js-close , #overlay').click(function () {
@@ -42,7 +42,7 @@ $(function () {$('#work_slider').slick({
             });
             $(function () {
               $('.pc-open').click(function () {
-                $('#overlay, .modal-window2').show();
+                $('#overlay, .modal-window2').fadeIn(200);
               });
               // オーバーレイクリックでもモーダルを閉じるように
               $('.js-close , #overlay').click(function () {
@@ -51,10 +51,15 @@ $(function () {$('#work_slider').slick({
             });
             $(function () {
               $('.sp-open').click(function () {
-                $('#overlay, .window_modal_image4').show();
+                $('#overlay, .modal-window3').fadeIn(200);
               });
               // オーバーレイクリックでもモーダルを閉じるように
-              $('.sp-close , #overlay').click(function () {
-                $('#overlay, .window_modal_image4').fadeOut(200);
+              $('.js-close , #overlay').click(function () {
+                $('#overlay, .modal-window3').fadeOut(200);
               });
             });
+
+            window.onload = function() {
+              const spinner = document.getElementById('loading');
+              spinner.classList.add('loaded');
+            }

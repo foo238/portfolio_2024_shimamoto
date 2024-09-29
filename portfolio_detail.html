@@ -5,9 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ詳細PC</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+    
 </head>
 <body>
+    <div id="overlay" class="overlay"></div>
+    <div class="modal-window">
+         <button class="js-close button-close"></button>    
+        <div class="window_modal">
+         <div class="window_modal_image1"><img src="images/cafesite_modal_pc.png" alt=""></div>
+        <div class="window_modal_image2"><img src="images/cafesite_modal_sp.png" alt=""></div>
+    </div>
+    </div>
+    <div class="modal-window2">
+        <button class="js-close button-close"></button>  
+        <div class="window_modal2">
+         <div class="window_modal_image3"><img src="images/cafesite_modal_pc.png" alt=""></div>
+        </div>
+    </div>
+    <div class="modal-window3">
+        <button class="js-close button-close"></button>  
+        <div class="window_modal3">
+        <div class="window_modal_image4"><img src="images/cafesite_modal_sp.png" alt=""></div>
+    </div>
+</div>
 
     <header class="header">
         <div class="header-wrap">
@@ -37,14 +61,15 @@
     <div class="container">
         <div class="container_main">
     <section class="work_detail1">
+        <div id="portfolio"></div>
        
             <h2><img src="images/portfolio.png" alt=""></h2>
-            <div class="button_view"><p>view all</p></div>  
+            <button class="button_view js-open">view all</button>  
             <div class="button_wrap">
-                <div class="sp_button">
+                <div class="pc-open sp_button">
                     <p>PC版</p>
                 </div>     
-                <div class="sp_button">
+                <div class="sp-open sp_button">
                     <p>スマホ版</p>
                 </div>     
             </div>
@@ -83,13 +108,6 @@
 </div>
 </div>
 
-<!-- <script>
-    $(function() {
-     $(".humberger").on("click", function () {
-      $(".sp-nav").fadeToggle();
-     $(".humberger").toggleClass("open");
-         });
-             });
-</script> -->
+<script src="main.js"></script>
 </body>
 </html>

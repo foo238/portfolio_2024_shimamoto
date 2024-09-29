@@ -22,12 +22,18 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
       </script>
-    <div></div>
+
    
 
 </head>
 
 <body>
+    <div class="loading" id="loading">
+        <div class="drop-shaped"></div>
+        <div class="ripple"></div>
+        <div class="ripple delay1"></div>
+        <div class="ripple delay2"></div>
+    </div>
     <header class="header">
         <div class="header-wrap">
             <h1 class="logo"><a href="#top"><img src="images/logo.png" alt="嶋本郁也のポートフォリオ"></a></h1>
@@ -131,7 +137,7 @@
 
             <div class="works_wrap work_slider" id="work_slider">
                 <div class="biyousitsu_img works_img_title">
-                    <div class="works_img"><img src="images/beauty_salon.png" alt=""></div>
+                 <div class="works_img"><a href="beautysalon_detail.html#beauty_salon"><img src="images/beauty_salon.png" alt=""></a> </div>
                     <div class="works_img_text">
                         <p>美容室『Life hair design』</p>
                         <p>LP型コーポレートサイト</p>
@@ -234,8 +240,8 @@
                 
             </div>
             <div class="button">
-                <div class="button_hover"><p>制作物一覧</p></div>
-                <div class="button_hover2"><p>制作物一覧</p></div>
+                <div class="button_hover"><a href="work_episode.html#work_episode"><p>制作物一覧</p></a></div>
+                <div class="button_hover2"><a href="work_episode.html#work_episode"><p>制作物一覧</p></a></div>
             </div>
         </section>
 

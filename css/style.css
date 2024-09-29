@@ -55,6 +55,79 @@ body {
     background: #f7fcfc;
 }
 
+/* ローディング画面 */
+#loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 2s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+  }
+
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+.loading {
+    background-color: #f7fcfc;
+    
+}
+.drop-shaped{
+    position: relative;
+    margin:  0 auto;
+    top: -25px;
+    width: 15px; 
+    height: 15px;
+    background: #bee8e9;
+    border-radius: 0% 100% 50% 50%/ 0% 50% 50% 100%;
+    transform: rotate(45deg) skew(10deg, 10deg);
+    animation: 2.5s cubic-bezier(.97,.03,.86,.12) 0s 1 running fall;
+  }
+
+  @keyframes fall {
+    to {
+      top: 450px;
+    }
+  }
+  
+  .ripple {
+    position: relative;
+    margin:  0 auto;
+    top: 300px;
+    width: 600px;
+    height: 300px;
+    border-radius: 600px / 300px;
+    border: 10px solid #bee8e9;
+    transform: scale(0.01,0.01);
+    opacity: 0;
+    animation: 3s ease-out 3s infinite running spread;
+  }
+  
+  @keyframes spread {
+    from {
+      opacity: 1;
+    }
+    to {
+      transform: scale(1,1);
+      opacity: 0;
+    }
+  }
+  
+  .delay1 {
+    top: -60px;
+    animation-delay: 3.3s;
+  }
+  
+  .delay2 {
+    top: -40px;
+    animation-delay: 3.7s;
+  }
+
+
 /* ヘッダー */
 .header {
     width: 184px;
@@ -1320,7 +1393,7 @@ body {
     
   }
 
-  .window_modal2 {
+  .modal-window2 {
     display: none;
     position: absolute;
     top: 50%;
@@ -1334,7 +1407,7 @@ body {
     transition: 0.5s ease;
 
   }
-  .window_modal3 {
+  .modal-window3 {
     display: none;
     position: absolute;
     top: 50%;
@@ -1351,7 +1424,8 @@ body {
 
   .button-close {
     position: relative;
-    top: 5%;
+    margin: 50px 0;
+    top: 8%;
     left: 100%;
     color: #6bc5d6;
     cursor: pointer;
@@ -1632,6 +1706,10 @@ body {
 
     @media screen and (max-width:767px) {
 
+        .about_top {
+            margin-bottom: 60px;
+        }
+
         .concept {
             width: 90%;
         }
@@ -1806,10 +1884,12 @@ body {
             font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
             font-weight: bolder;
             background-color: #b1d3d3;
+            color: #f4f4f4;
             border-radius: 6px;
             padding: 25px 30px;
             border: none;
             margin: 0 auto;
+            cursor: pointer;
 
         }
 
@@ -1939,8 +2019,47 @@ body {
         .concept_main p {
             text-align: left;
         }
+
+        .button-close {
+            margin: 50px 0px;
+            top: 8%;
+            left: 95%;
+        }
+
+        .button-close::before, .button-close::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width:5px; 
+            height: 35px; 
+            background:  #6bc5d6;
+          }
+          .window_modal3 {
+            width: 90%;
+            margin: 50px auto;
+
+          }
+
+          .window_modal_image4 img{                                 
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+
+          }
+          .window_modal2 {
+            margin: 50px auto;
+
+          }
+
+          .window_modal_image3 img{                                 
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+
+          }
+        }
     }
 
 
 
-}
