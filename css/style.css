@@ -26,6 +26,8 @@ dd {
     font-feature-settings: "palt";
 }
 
+
+
 a {
     /*下線を消す*/
     text-decoration: none;
@@ -53,19 +55,23 @@ body {
     width: 100%;
     color: #3c3b54;
     background: #f7fcfc;
+
 }
+
+
+
 
 /* ローディング画面 */
 #loading {
     width: 100vw;
     height: 100vh;
-    transition: all 2s ease-in-out;
+    transition: all 12s ease-in-out;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 20000;
   }
-
+  
   .loaded {
     opacity: 0;
     visibility: hidden;
@@ -80,12 +86,12 @@ body {
     position: relative;
     margin:  0 auto;
     top: -25px;
-    width: 15px; 
-    height: 15px;
+    width: 30px; 
+    height: 30px;
     background: #bee8e9;
     border-radius: 0% 100% 50% 50%/ 0% 50% 50% 100%;
     transform: rotate(45deg) skew(10deg, 10deg);
-    animation: 2.5s cubic-bezier(.97,.03,.86,.12) 0s 1 running fall;
+    animation: 3s cubic-bezier(.97,.03,.86,.12) 0s infinite running fall;
   }
 
   @keyframes fall {
@@ -107,7 +113,7 @@ body {
     animation: 3s ease-out 3s infinite running spread;
   }
   
-  @keyframes spread {
+  /* @keyframes spread {
     from {
       opacity: 1;
     }
@@ -125,7 +131,33 @@ body {
   .delay2 {
     top: -40px;
     animation-delay: 3.7s;
-  }
+  } */
+
+
+  .sizuku {
+    animation: sizuku 1s linear 0s; /*1s はアニメーションにかかる時間*/
+    background-color: #6EB2E0; /*背景色*/
+    border-radius: 50%;
+    border: 4px solid #6EB2E0; /*ボーダーの幅と色*/
+    position: absolute;
+    z-index: 1000;
+}
+
+@keyframes sizuku {
+    0% {
+        height: 0; 
+        opacity: 1;
+        transform: translate(0, 0);
+        width: 0;
+    }
+    100% {
+        height: 500px; /*円の高さ幅の最大値*/
+        opacity: 0;
+        transform: translate(-250px, -250px); /*高さの半分の値にする*/
+        width: 500px; /*基本高さと合わせる*/
+    }
+}
+
 
 
 /* ヘッダー */
@@ -188,8 +220,9 @@ body {
 /* コンテナー */
 .container {
     max-width: 1366px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     overflow: hidden;
     margin-left: 184px;
 
@@ -224,15 +257,16 @@ body {
 
 .concept_title {
     display: block;
-    width: 50%;
+    width: 30%;
     text-align: center;
 
 }
 
 .concept_main {
-    width: 50%;
-    margin-left: 105px;
-
+    padding-top: 20px;
+    width: 30%;
+    margin-left: 125px;
+  
 }
 
 .concept_main h3 {
@@ -350,9 +384,9 @@ body {
     font-size: 24px;
     padding-top: 75px;
     position: relative;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
-
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -373,8 +407,9 @@ body {
 .about_main p {
 
     font-size: 16px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -457,8 +492,9 @@ body {
     font-size: 16px;
     line-height: 1.75;
     padding-left: 20px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 
 }
@@ -485,8 +521,9 @@ body {
     font-size: 16px;
     line-height: 1.75;
     padding-left: 20px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 
 }
@@ -513,8 +550,9 @@ body {
     font-size: 16px;
     line-height: 1.75;
     padding-left: 20px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 
 }
@@ -736,14 +774,16 @@ body {
 
 .button_hover p {
     color: #eaffff;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-
+   font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .button_hover2 p {
     color: #b1d3d3;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-}
+   font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
 
 .button_hover2 {
     position: absolute;
@@ -774,9 +814,11 @@ body {
     height: 100%;
     background-color: #b1d3d3;
     color: #ddecec;
-    text-align: center;
+    text-align:-webkit-center;
     border: none;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .button_input2:hover {
@@ -789,17 +831,19 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    text-align: center;
-    background-color: rgba(235, 249, 249, 0.6);
+    text-align:-webkit-center;
+    background-color:#b1d3d3;
+    opacity: 0.6;
     transition: 0.3s ease-in-out;
     opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: none;
-    color: #eaffff;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-
+    color: #b1d3d3;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -875,14 +919,17 @@ body {
 .works_img_text p:first-of-type {
     font-size: 20px;
     font-weight: bold;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
 }
 
 .works_img_text p {
     padding-top: 10px;
     font-size: 16px;
-    font-weight: bolder;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ 
 
 }
 
@@ -915,14 +962,16 @@ body {
 
 .contact_us h3 {
     padding-bottom: 16px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
 .contat_us p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -946,8 +995,9 @@ body {
 
 .form p {
     padding-bottom: 13px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 
 }
@@ -978,8 +1028,9 @@ body {
 .footer p {
     margin-top: 350px;
     margin-bottom: 50px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -1019,7 +1070,8 @@ body {
 }
 
 .website_title h3 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
     font-weight: bolder;
     font-size: 36px;
     margin-bottom: 30px;
@@ -1027,8 +1079,9 @@ body {
 }
 
 .website_title p {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 18px;
 
 }
@@ -1194,7 +1247,8 @@ body {
 }
 
 .web_banner_title h3 {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
     font-weight: bolder;
     font-size: 36px;
     margin-bottom: 30px;
@@ -1202,8 +1256,9 @@ body {
 }
 
 .web_banner_titlep {
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    font-weight: lighter;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 18px;
 
 }
@@ -1250,7 +1305,9 @@ body {
 
 
 }
-
+.detail_image {
+    text-align: center;
+}
 
 .tripsite_episode img {
     width: 80%;
@@ -1320,7 +1377,8 @@ body {
     width: 400px;
     margin: 0 auto;
     text-align: left;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif; 
+    font-style: normal;
     font-weight: bolder;
 
 }
@@ -1352,7 +1410,9 @@ body {
     display: none;
 }
 
-
+.button_view p {
+    color: #eaffff;
+}
 
 
 .button_view {
@@ -1360,13 +1420,13 @@ body {
     text-align: center;
     width: 160px;
     font-size: 24px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
     font-weight: bolder;
     background-color: #b1d3d3;
     border-radius: 6px;
     padding: 25px 0 25px 0;
     border: none;
-    color: #eaffff;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -1424,9 +1484,9 @@ body {
 
   .button-close {
     position: relative;
-    margin: 50px 0;
+    margin: 80px 0;
     top: 8%;
-    left: 100%;
+    left: 95%;
     color: #6bc5d6;
     cursor: pointer;
     border: none;
@@ -1528,14 +1588,16 @@ body {
 
 .work_detail1_title h3 {
     font-size: 20px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
     font-weight: bolder;
     line-height: 1.75;
 }
 
 .work_detail1_title p {
     font-size: 18px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
     font-weight: solid;
     line-height: 1.75;
 
@@ -1557,7 +1619,8 @@ body {
     background-position: left bottom;
     font-size: 16px;
     font-weight: bold;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
     padding: 10px 10px 10px 0;
     margin-top: 10px;
 }
@@ -1565,7 +1628,8 @@ body {
 .work_detail1_wrap dd {
     padding-top: 10px;
     font-size: 16px;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-style: normal;
     font-weight: solid;
 }
 
@@ -1839,9 +1903,10 @@ body {
             display: block;
             justify-content: space-between;
             text-align: center;
-            width: 40%;
-            font-size: 16px;
-            font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+            width: 30%;
+            font-size: 14px;
+            font-family: "yu-gothic-pr6n", sans-serif;
+            font-style: normal;
             font-weight: bolder;
             background-color: #b1d3d3;
             border-radius: 6px;
@@ -1881,7 +1946,8 @@ body {
             text-align: center;
             width: 30%;
             font-size: 24px;
-            font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+            font-family: "yu-gothic-pr6n", sans-serif;
+            font-style: normal;
             font-weight: bolder;
             background-color: #b1d3d3;
             color: #f4f4f4;
@@ -2021,7 +2087,7 @@ body {
         }
 
         .button-close {
-            margin: 50px 0px;
+            margin: 20px 0 100px 0px;
             top: 8%;
             left: 95%;
         }
