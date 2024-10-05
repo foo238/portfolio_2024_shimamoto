@@ -24,6 +24,7 @@ dd {
         "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
         "ＭＳ 明朝", serif;
     font-feature-settings: "palt";
+    scroll-behavior: smooth;
 }
 
 
