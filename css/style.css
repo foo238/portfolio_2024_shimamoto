@@ -35,6 +35,7 @@ a {
     /*色を消す*/
     color: inherit;
     transition: 0.3s;
+    
 }
 
 a:hover {

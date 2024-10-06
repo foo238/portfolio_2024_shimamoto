@@ -6,7 +6,7 @@ $(function () {$('#work_slider').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4000,
     }
     );
@@ -14,7 +14,7 @@ $(function () {$('#work_slider').slick({
     
     $(document).on('ready', function() {
     $("#regular").slick({
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
   
@@ -24,44 +24,17 @@ $(function () {$('#work_slider').slick({
 
 
 
-
-  // var headerHeight = $('header').outerHeight();
-  // $('a[href^="#"]').click(function() {
-  //     var href= $(this).attr("href");
-  //     var target = $(href);
-  //     var position = target.offset().top - headerHeight;
-  //     $('body,html').stop().animate({scrollTop:position}, 300);   
-  //     return false;
-  // });
-
-  // var headerHeight = $('header').outerHeight();
-  // var url = location.hash;
-  // if(url) {
-  //     $('body,html').stop().scrollTop(0);
-  //     setTimeout(function(){
-  //         var target = $(url);
-  //         var position = target.offset().top - headerHeight;
-  //         $('body,html').stop().animate({scrollTop:position}, 500);
-  //     }, 100);
-  // }
-  // $('a[href^="#"]').click(function() {
-  //     var href= $(this).attr("href");
-  //     var target = $(href);
-  //     var position = target.offset().top - headerHeight;
-  //     $('body,html').stop().animate({scrollTop:position}, 500);   
-  // });
-
-
-
-
-
+    // ハンバーガー
     $(function() {
-     $(".humberger").on("click", function () {
+     $(".humberger,.sp-nav li").on("click", function () {
       $(".sp-nav").fadeToggle();
      $(".humberger").toggleClass("open");
          });
              });
 
+      
+
+    
             //  モーダル処理
 
             $(function () {
@@ -123,24 +96,6 @@ $(function () {$('#work_slider').slick({
                     this.parentNode.removeChild(this);
                 }, false);
             }
-
-
-            var headerHeight = $('header').outerHeight();
-            var url = location.hash;
-            if(url) {
-                $('body,html').stop().scrollTop(0);
-                setTimeout(function(){
-                    var target = $(url);
-                    var position = target.offset().top - headerHeight;
-                    $('body,html').stop().animate({scrollTop:position}, 500);
-                }, 100);
-            }
-            $('a[href^="#"]').click(function() {
-                var href= $(this).attr("href");
-                var target = $(href);
-                var position = target.offset().top - headerHeight;
-                $('body,html').stop().animate({scrollTop:position}, 500);   
-            });
 
 
             // キャンバス
