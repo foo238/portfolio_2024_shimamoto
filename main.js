@@ -78,23 +78,23 @@ $(function () {$('#work_slider').slick({
 
 
 
-                //座標の取得
-                var x = e.pageX;
-                var y = e.pageY;
+                // //座標の取得
+                // var x = e.pageX;
+                // var y = e.pageY;
 
-                //しずくになるdivの生成、座標の設定
-                var sizuku = document.createElement("div");
-                sizuku.style.top = y + "px";
-                sizuku.style.left = x + "px";
-                document.body.appendChild(sizuku);
+                // //しずくになるdivの生成、座標の設定
+                // var sizuku = document.createElement("div");
+                // sizuku.style.top = y + "px";
+                // sizuku.style.left = x + "px";
+                // document.body.appendChild(sizuku);
 
-                //アニメーションをする className を付ける
-                sizuku.className = "sizuku";
+                // //アニメーションをする className を付ける
+                // sizuku.className = "sizuku";
 
-                //アニメーションが終わった事を感知してしずくを remove する
-                sizuku.addEventListener("animationend", function() {
-                    this.parentNode.removeChild(this);
-                }, false);
+                // //アニメーションが終わった事を感知してしずくを remove する
+                // sizuku.addEventListener("animationend", function() {
+                //     this.parentNode.removeChild(this);
+                // }, false);
             }
 
 
