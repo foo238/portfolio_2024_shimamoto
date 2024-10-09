@@ -229,7 +229,6 @@ body {
 
 /* コンテナー */
 .container {
-    max-width: 1366px;
     font-family: "yu-gothic-pr6n", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -804,15 +803,15 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    color: #f7fcfc;
-    ;
+    color: #b1d3d3;
     text-align: center;
-    background-color: rgba(235, 249, 249, 0.6);
+    background-color: #eaffff;
     transition: 0.3s ease-in-out;
     opacity: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    border-radius: 30px;
 }
 
 .button_hover2 a {
@@ -1908,7 +1907,6 @@ body {
 
         .about_img {
             margin: 0 auto;
-            width: 90%;
         }
 
         .about_main {
